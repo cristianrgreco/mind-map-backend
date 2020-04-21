@@ -55,7 +55,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/:id', (req, res) => {
+app.get('/maps/:id', (req, res) => {
     if (mindMaps[req.params.id]) {
         return res.json(mindMaps[req.params.id]);
     } else {
@@ -63,7 +63,7 @@ app.get('/:id', (req, res) => {
     }
 });
 
-app.put('/:id', (req, res) => {
+app.put('/maps/:id', (req, res) => {
     mindMaps[req.params.id] = req.body;
     return res.sendStatus(201);
 });
