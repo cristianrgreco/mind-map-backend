@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/testServer.js",
     "logs:fetchMap": "sls logs -f fetchMap",
-    "logs:updateMap": "sls logs -f updateMap",
+    "logs:upsertMap": "sls logs -f upsertMap",
     "deploy": "sls deploy"
   },
   "keywords": [],
