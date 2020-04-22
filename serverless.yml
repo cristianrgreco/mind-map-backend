@@ -7,11 +7,11 @@ provider:
   region: eu-west-2
   usagePlan:
     quota:
-      limit: 10000
+      limit: 100000
       period: MONTH
     throttle:
       burstLimit: 100
-      rateLimit: 100
+      rateLimit: 250
   environment:
     DB_HOSTNAME: ${ssm:/mind_mapper_db_hostname~true}
     DB_USERNAME: ${ssm:/mind_mapper_db_username~true}

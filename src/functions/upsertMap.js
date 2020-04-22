@@ -5,7 +5,7 @@ module.exports.handler = async event => {
     const mapId = event.pathParameters.mapId;
     const map = JSON.parse(event.body); // todo sanitise/add size limits
 
-    console.log(`Upsert map for ID: ${mapId}, map: ${JSON.stringify(map, null, 2)}`);
+    console.log(`Upsert map for ID: ${mapId}`);
 
     const mapRepository = getCrudRepository(await connectToDatabase(), 'maps');
     await mapRepository.upsert(mapId, map);
