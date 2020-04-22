@@ -8,7 +8,7 @@ class CrudRepository {
     }
 
     upsert(id, entity) {
-        return this.collection.update({id}, {...entity, id}, {upsert: true});
+        return this.collection.updateOne({id}, {...entity, id}, {upsert: true});
     }
 }
 
